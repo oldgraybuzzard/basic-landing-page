@@ -14,9 +14,9 @@ This app can be used to create a basic landing page. It's a template built with 
 * [Tests](#tests)
 
 ## Installation
-$ git clone https://github.com/oldgraybuzzard/basic-landing-page.git
-$ npm install
-$ npm start
+* git clone https://github.com/oldgraybuzzard/basic-landing-page.git
+* npm install
+* npm start
 
 ## Links
 [Github Link](https://github.com/oldgraybuzzard/basic-landing-page.git)
