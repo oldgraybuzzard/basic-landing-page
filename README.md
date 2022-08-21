@@ -16,7 +16,8 @@ This app can be used to create a basic landing page. It's a template built with 
 ## Installation
 * git clone https://github.com/oldgraybuzzard/basic-landing-page.git
 * npm install
-* npm start
+* npm install --save inquirer
+* npm install fs-extra
 
 ## Links
 [Github Link](https://github.com/oldgraybuzzard/basic-landing-page.git)

@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Template Generator for Basic Landing Page",
   "main": "app.js",
-  "scripts": {
-    "start": "node app.js"
-  },
   "dependencies": {
     "cli-spinners": "^2.7.0",
     "clone": "^1.0.4",
