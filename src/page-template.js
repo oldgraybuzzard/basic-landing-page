@@ -74,7 +74,7 @@ module.exports = templateData => {
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <h2 class="mb-4">Ready to get started? Contact up now!</h2>
-                        <form class="form-subscribe" id="subscribeForm" action="mailto:kfelder@melken-solutions.com?subject=We want to sign up&body=Sign us up" method="POST" enctype="multipart/form-data" name="emailForm">
+                        <form class="form-subscribe" id="subscribeForm" action="mailto:${formEmail}?subject=We want to sign up&body=Sign us up" method="POST" enctype="multipart/form-data" name="emailForm">
                             <div class="row">
                                 <div class="col">
                                     <input type="email" class="form-control form-control-lg" id="emailAddress" placeholder="Enter Your Email Address" aria-describedby="emailHelp">

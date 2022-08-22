@@ -82,7 +82,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'form',
+            name: 'formEmail',
             message: 'To what email address is the form information to be sent?',
             when: ({confirmForm}) => {
                 if (confirmForm) {
@@ -91,6 +91,13 @@ const promptUser = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'input',
+            name: 'emailSubjest',
+            message: 'What will be the subject of your email?',
+            
+
         },
         {
             type: 'confirm',

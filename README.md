@@ -5,7 +5,7 @@
 ## Description
 This app can be used to create a basic landing page. It's a template built with Node that asks questions in the command prompt. The answers will be used to create the HTML file.
 
-## Table of COntents
+## Table of Contents
 * [Installation](#installation)
 * [Links](#links)
 * [Usage](#usage)
@@ -27,7 +27,7 @@ This app can be used to create a basic landing page. It's a template built with 
 
 ## Contributors 😃
 [oldgraybuzzard](https://github.com/oldgraybuzzard)
-* Contact me at k_felder@me.com
+* Contact me at https://github.com/oldgraybuzzard
 
 ## Features
 None 
