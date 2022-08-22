@@ -57,22 +57,46 @@ const promptUser = () => {
         },
         {
             type: 'confirm',
-            name: 'confirmHero',
+            name: 'confirmBenefit',
             message: 'Is there woridng to add in the hero section?',
             default: true
         },
         {
             type: 'input',
-            name: 'hero',
-            message: 'what wording do you want in the hero section?',
-            when: ({confirmHero}) => {
-                if (confirmHero) {
+            name: 'benefit',
+            message: 'what wording do you want in the benefit section?',
+            when: ({confirmBenefit}) => {
+                if (confirmBenefit) {
                     return true;
                 } else {
-                    console.log('Please enter hero test.');
+                    console.log('Please enter the benefit test.');
                     return false;
                 }
             }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmForm',
+            message: 'Add in the capture and send email box?',
+            default: false
+        },
+        {
+            type: 'input',
+            name: 'form',
+            message: 'To what email address is the form information to be sent?',
+            when: ({confirmForm}) => {
+                if (confirmForm) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'addSocialMedia',
+            message: 'Add Social Media links?',
+            default: false
         },
     ]);
 };

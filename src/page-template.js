@@ -1,6 +1,6 @@
 module.exports = templateData => {
   // destructure projects and about data from templateData based on their property key names
-    const { link, slogan, hero, ...header } = templateData;
+    const { link, slogan, benefit, ...header } = templateData;
 
     return `
     <!DOCTYPE html>
@@ -24,8 +24,7 @@ module.exports = templateData => {
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">${slogan}</a>
-                <a class="btn btn-primary" href="${link}">Sign Up</a>
+                <a class="navbar-brand" href="${link}">${slogan}</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -35,7 +34,7 @@ module.exports = templateData => {
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">${hero}</h1>
+                            <h1 class="mb-5">${benefit}</h1>
                         </div>
                     </div>
                 </div>
@@ -74,31 +73,16 @@ module.exports = templateData => {
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
-                        <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-                         <form class="form-subscribe" id="contactFormFooter">
-                            <!-- Email address input-->
+                        <h2 class="mb-4">Ready to get started? Contact up now!</h2>
+                        <form class="form-subscribe" id="subscribeForm" action="mailto:kfelder@melken-solutions.com?subject=We want to sign up&body=Sign us up" method="POST" enctype="multipart/form-data" name="emailForm">
                             <div class="row">
                                 <div class="col">
-                                    <input class="form-control form-control-lg" id="emailAddressBelow" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">Email Address is required.</div>
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">Email Address Email is not valid.</div>
+                                    <input type="email" class="form-control form-control-lg" id="emailAddress" placeholder="Enter Your Email Address" aria-describedby="emailHelp">
                                 </div>
-                                <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
                             </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
                         </form>
                     </div>
                 </div>
@@ -137,8 +121,7 @@ module.exports = templateData => {
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="assets/script.js"></script>
     </body>
   </html>
   `;
