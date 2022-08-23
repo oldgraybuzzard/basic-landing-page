@@ -14,7 +14,7 @@ module.exports = templateData => {
         <meta name="author" content="" />
         <title>${siteName} Landing Page</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Bootstrap icons-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <!-- Google fonts-->
