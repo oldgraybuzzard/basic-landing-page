@@ -1,12 +1,8 @@
 module.exports = templateData => {
-  //set current year
-  function setYear() {
-  document.write(new Date().getFullYear())
-}
-  
+ 
   
   // destructure projects and about data from templateData based on their property key names
-    const { link, slogan, benefit, ...header } = templateData;
+    const { siteName, siteLink, slogan, benefit, formEmail, emailSubject, emailBody, featureOneIcon, featureOneHeader, featureOneText, featureTwoIcon, featureTwoHeader, featureTwoText, featureThreeIcon, featureThreeHeader, featureThreeText, facebook, instagram, twitter, snapchat, whatsapp, aboutLink, termsLink, privacyLink } = templateData;
 
     return `
     <!DOCTYPE html>
@@ -16,7 +12,7 @@ module.exports = templateData => {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>${header.name} Landing Page</title>
+        <title>${siteName} Landing Page</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -30,7 +26,7 @@ module.exports = templateData => {
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="${siteLink}">${header.name}</a>
+                <a class="navbar-brand" href="${siteLink}">${siteName}</a>
                 <a class="navbar-text">${slogan}</a>
             </div>
         </nav>
@@ -107,7 +103,11 @@ module.exports = templateData => {
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="${privacyLink}">Privacy Policy</a></li>
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; ${siteName} ${setYear()}. All Rights Reserved.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy;
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                       ${siteName} - All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
@@ -134,10 +134,7 @@ module.exports = templateData => {
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
         </script>
-        // reserve
-        <!-- Reserved for future update
         <script src="assets/script.js"></script>
-        -->
     </body>
   </html>
   `;
