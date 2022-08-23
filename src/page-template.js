@@ -76,7 +76,7 @@ module.exports = templateData => {
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
-                        <h2 class="mb-4">Ready to get started? Contact up now!</h2>
+                        <h2 class="mb-4">Ready to get started? Email us now!</h2>
                         <form class="form-subscribe" id="subscribeForm" action="mailto:${formEmail}?subject=${emailSubject}&body=${emailBody}" method="POST" enctype="multipart/form-data" name="emailForm">
                             <div class="row">
                                 <div class="col">
